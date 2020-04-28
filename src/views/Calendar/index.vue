@@ -123,13 +123,16 @@ export default defineComponent({
     height: 40px;
     text-align: center;
     cursor: pointer;
+    border-radius: 50%;
     .day {
       display: inline-block;
       width: 100%;
       height: 100%;
       line-height: 40px;
+      border-radius: 50%;
     }
     .isactive {
+      border-radius: 50%;
       background: #409eff;
       color: #fff;
     }
