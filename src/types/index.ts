@@ -19,3 +19,6 @@ export type action = {
 export type item = {
     isActive: boolean
 }
+export interface DateFn<T> {
+    (year: T, month: T): T;
+}

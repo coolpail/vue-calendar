@@ -14,7 +14,7 @@
       </div>
       <div class="content">
         <p class="item" v-for="(el, index) in maxDays" :key="index">
-          <span :class="['day', el.isActive ? 'isactive' : '']" @click="(e) => handleClick(el, e)"
+          <span :class="['day', el.isActive ? 'isactive' : '']"
             v-if="(index - state.currentMonthFirstDay) >= 0 
               && (state.currentMonthMaxDays + state.currentMonthFirstDay - 1) >= index">
             {{index - state.currentMonthFirstDay + 1}}
@@ -52,7 +52,10 @@ export default defineComponent({
     const maxDays = ref<item[]>([]);
     watch([currentMonthFirstDay, currentDate], () => {
       const daysArr = Array.from({length: 7 * 6 }, (el, idx) => {
-        if (idx === (currentMonthFirstDay.value + currentDate.value - 1)) {
+        if (idx === (currentMonthFirstDay.value + currentDate.value - 1) 
+          && new Date().getFullYear() === currentYear.value
+          && new Date().getMonth() + 1 === currentMonth.value
+          && new Date().getDate() === currentDate.value) {
           return ({isActive: true})
         } else {
           return ({isActive: false})
@@ -60,12 +63,12 @@ export default defineComponent({
       });
       maxDays.value = daysArr
     })
-    const handleClick = (el: item, e: Event) => {
-      const val = Number((e.target as HTMLElement).innerText)
-      maxDays.value.forEach((el:item) => el.isActive = false)
-      el.isActive = true
-      dayStr.value = [currentYear.value, currentMonth.value, val] //vue3 可以写成 dayStr.value[2] = val; 这vue-cli还是不支持proxy
-    }
+    // const handleClick = (el: item, e: Event) => {
+    //   const val = Number((e.target as HTMLElement).innerText)
+    //   maxDays.value.forEach((el:item) => el.isActive = false)
+    //   el.isActive = true
+    //   dayStr.value = [currentYear.value, currentMonth.value, val] //vue3 可以写成 dayStr.value[2] = val; 这vue-cli还是不支持proxy
+    // }
     const state = reactive({
       date,
       currentYear,
@@ -82,7 +85,7 @@ export default defineComponent({
       dayStr,
       state,
       dispatch,
-      handleClick
+      // handleClick
     }
   },
 })
