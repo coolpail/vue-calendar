@@ -1,11 +1,4 @@
 module.exports = {
   outputDir: "docs",
-  publicPath: process.env.NODE_ENV === "production" ? "/vue-calendar" : "",
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@': resolve('./src')
-      }
-    },
-  }
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-calendar" : ""
 }
