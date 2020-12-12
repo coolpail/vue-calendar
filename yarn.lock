@@ -5100,9 +5100,9 @@ inherits@2.0.3:
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
 
 ini@^1.3.4:
-  version "1.3.5"
-  resolved "https://registry.npm.taobao.org/ini/download/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
-  integrity sha1-7uJfVtscnsYIXgwid4CD9Zar+Sc=
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
+  integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
 inquirer@^7.0.0, inquirer@^7.1.0:
   version "7.1.0"
@@ -9768,13 +9768,6 @@ vue-class-component@^7.1.0, vue-class-component@^7.2.3:
   resolved "https://registry.npm.taobao.org/vue-class-component/download/vue-class-component-7.2.3.tgz#a5b1abd53513a72ad51098752e2dedd499807cca"
   integrity sha1-pbGr1TUTpyrVEJh1Li3t1JmAfMo=
 
-vue-cli-plugin-vue-next@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.npm.taobao.org/vue-cli-plugin-vue-next/download/vue-cli-plugin-vue-next-0.1.2.tgz#083292c28d0bb503e72db791fa7ad49e7b6a2b71"
-  integrity sha1-CDKSwo0LtQPnLbeR+nrUnntqK3E=
-  dependencies:
-    vue-loader "^16.0.0-alpha.3"
-
 vue-eslint-parser@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-7.0.0.tgz#a4ed2669f87179dedd06afdd8736acbb3a3864d6"
@@ -9818,17 +9811,6 @@ vue-loader@^15.9.1:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
-
-vue-loader@^16.0.0-alpha.3:
-  version "16.0.0-alpha.3"
-  resolved "https://registry.npm.taobao.org/vue-loader/download/vue-loader-16.0.0-alpha.3.tgz#3471a3325a07a94e569aa281f83361819e4ad280"
-  integrity sha1-NHGjMloHqU5WmqKB+DNhgZ5K0oA=
-  dependencies:
-    chalk "^3.0.0"
-    hash-sum "^2.0.0"
-    loader-utils "^1.2.3"
-    merge-source-map "^1.1.0"
-    source-map "^0.6.1"
 
 vue-property-decorator@^8.4.1:
   version "8.4.2"
